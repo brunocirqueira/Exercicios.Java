@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mais formularios</title>
+</head>
+<body>
+
+    <h1>mais formularios</h1>
+    <form action="processa.html" method="GET">
+
+    <h2>label</h2>
+
+    <label>
+        nome: 
+        <input type="text" name="nome">
+    </label>
+
+    <label for="email">email</label>
+    <input type="text" name="teste" id="email">
+
+    <br>
+
+    <h2>mais elementos de formulas</h2>
+
+    Genero <br>
+    <input type="radio" name="genero" value="Feminino">Feminino
+    <input type="radio" name="genero" value="masculino">masculino
+    <input type="radio" name="genero" value="masculino">----
+
+
+     <br><br>
+
+    <input type="checkbox" name="estilo" value="rock">rock
+    <input type="checkbox" name="estilo" value="pop">pop
+    <input type="checkbox" name="estilo" value="sertanejo">sertanejo
+     
+    <br><br>
+
+    Estado: 
+    <select name="Estado">
+        <option value="">Selecione...</option>
+        <option value="SP">São Paulo</option>
+        <option value="MG">Minas Gerais</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="CE">Ceara</option>
+        <option value="MT">Mato Grosso</option>
+
+    </select>
+
+     <br><br>
+
+     Upload de arquivos:
+     <input type="file" name="arquivos">
+
+
+    <input type="submit" value="cadastrar">
+    </form>
+
+    <form>
+
+        <h2>fieldset e legend</h2>
+
+        <fieldset>
+            <legend>dados pessoais</legend>
+
+
+                 <label>
+                     nome: 
+                     <input type="text" name="nome">
+                  </label>
+
+                  <label for="email">email</label>
+                  <input type="text" name="teste" id="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>dados adicionais</legend>
+             Genero <br>
+    <input type="radio" name="genero" value="Feminino">Feminino
+    <input type="radio" name="genero" value="masculino">masculino
+    <input type="radio" name="genero" value="masculino">----
+
+
+
+        </fieldset>
+
+
+    </form>
+
+
+
+</body>
+</html>

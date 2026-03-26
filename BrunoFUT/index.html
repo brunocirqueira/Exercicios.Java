@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUNO CIRQUEIRA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="#inicio" class="logo">[SUA LOGO / SEU NOME]</a>
+            
+            <nav class="navbar">
+                <a href="#inicio">Início</a>
+                <a href="#historia">História</a>
+                <a href="#pilares">Pilares</a>
+                <a href="#contato">Contato</a>
+            </nav>
+            
+            <div class="icons">
+                <a href="LINK INSTAGRAM" target="_blank">
+                    <img src="img/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="LINK LINKEDIN" target="_blank">
+                    <img src="img/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <img src="[CAMINHO PARA SUA FOTO PRINCIPAL]" alt="Sua Foto" class="hero-photo">
+            <div class="hero-content">
+                <h1>[SEU NOME COMPLETO]</h1>
+                <h2>Mais que um [SUA ÁREA], um propósito em movimento.</h2>
+                <p>
+                    [BREVE DESCRIÇÃO DO SEU PROPÓSITO E VALORES. Ex: Formado em engenharia e na vida, atuo com inovação, disciplina e ética, buscando a transformação do mercado.]
+                </p>
+                <a href="#contato" class="btn primary">Conecte-se</a>
+                <a href="[LINK PARA VÍDEO]" class="btn secondary">Assista ao Vídeo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="historia" class="section dark">
+        <div class="container column">
+            <h2>A História</h2>
+            <p class="history-text">
+                [PARÁGRAFO 1: Onde você começou, sua origem. Ex: De São José do Rio Preto para o mundo: o início de uma jornada com propósito.]
+            </p>
+            <p class="history-text">
+                [PARÁGRAFO 2: Como sua trajetória te moldou. Ex: Minha jornada une conhecimento técnico, superação e pertencimento, inspirando outros a acreditarem no poder da educação e do trabalho duro.]
+            </p>
+        </div>
+    </section>
+
+    <section id="pilares" class="section light">
+        <div class="container column">
+            <h2>Pilares que me movem</h2>
+            <div class="pillars-grid">
+                <div class="pillar">
+                    <h3>Propósito</h3>
+                    <p>Foco claro em objetivos de longo prazo e na contribuição para a comunidade.</p>
+                </div>
+                <div class="pillar">
+                    <h3>Disciplina</h3>
+                    <p>O rigor diário como símbolo de excelência e a busca contínua por melhorias.</p>
+                </div>
+                <div class="pillar">
+                    <h3>Inovação</h3>
+                    <p>Adaptação a novas tecnologias e pensamento criativo para solucionar desafios.</p>
+                </div>
+                <div class="pillar">
+                    <h3>Ética</h3>
+                    <p>Integridade e transparência em todas as ações e negociações profissionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics">
+        <div class="container">
+            <div class="metric-box">
+                <span class="number">5+</span>
+                <p>Anos de Experiência</p>
+            </div>
+            <div class="metric-box">
+                <span class="number">100%</span>
+                <p>Projetos Entregues</p>
+            </div>
+            <div class="metric-box">
+                <span class="number">1.000+</span>
+                <p>Clientes Atendidos</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="footer dark">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Conecte-se</h4>
+                <p>Para parcerias, propostas ou entrevistas:</p>
+                <p>📩 Email: **[SEU EMAIL]**</p>
+                <p>📲 WhatsApp: **[SEU WHATSAPP]**</p>
+            </div>
+            <div class="footer-section">
+                <h4>Acompanhe a Jornada</h4>
+                <ul>
+                    <li><a href="[LINK INSTAGRAM]">Instagram</a></li>
+                    <li><a href="[LINK LINKEDIN]">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 [SEU NOME]. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script simples para o Menu Hamburguer
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Opcional: Fechar menu ao clicar em um link
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // Script para esconder o header ao rolar (opcional)
+        let lastScrollY = window.scrollY;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.topo {
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  border-bottom: 7px solid #414141;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/*ESTILO DO MENU HAMBURGUER*/
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: 10px 10px 10px;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle .hamburguer,
+.menu-toggle.ativo .hamburguer {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle .hamburguer::before,
+.menu-toggle .hamburguer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle .hamburguer::before {
+  top: -8px;
+}
+
+.menu-toggle .hamburguer::after {
+  top: 8px;
+}
+
+.menu-toggle.ativo .hamburguer {
+  background-color: transparent;
+}
+
+.menu-toggle.ativo .hamburguer::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle.ativo .hamburguer::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu {
+  display: flex;
+}
+
+.sobre {
+  padding: 40px;
+}
+
+.container-sobre {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.container-sobre img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.texto-sobre {
+  flex: 1;
+  min-width: 280px;
+  line-height: 1.5;
+}
+
+.texto-sobre h2 {
+  margin-top: 0;
+  color: #111;
+}
+
+.texto-sobre p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.texto-sobre p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-img {
+ padding: 20px;
+}
+
+/*CARROSSEL FUNCIONAL*/
+
+    .carousel-container {
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .carousel-item img {
+      max-width: 4500px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .carousel-item h2 {
+      color: #2c3e50;
+    }
+
+    .carousel-item p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      color: #333;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .carousel-item img {
+        max-width: 80%;
+      }
+    }
+
+
+    .logo img {
+      height: 120px;
+      width: auto;
+    }
+
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .menu.menu-aberto {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+}
